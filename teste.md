@@ -19,7 +19,7 @@
     <!--quebra de linas e epaço na vertical .html -->
 <br/><br/><br/>
 <!--quebra de linas e epaço na vertical .html -->
-    adotar para desenvolver um bom texto e como você deve estruturá-lo, é
+    adotar para o desenvolver um bom texto e como você deve estruturá-lo, é
     perfeitamente
     <!--espaçamento entre texto na horizontal .html -->
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
