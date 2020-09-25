@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
@@ -1296,11 +1296,14 @@ font-size:18px;"><span style="font-size:18px;">
 
 <script>
 
-<!--redirecionamento de pagina.html -->
-setTimeout(function() {
-window.location.href = "https://bit.ly/3kmfnQK";
-}, 50000);
-<!--redirecionamento de pagina.html -->
+<!--solicita abrir pagina em nova aba.html -->
+    function $(id){
+        return document.getElementById(id);
+    }
+    window.onload=function(){
+            window.open("http://www.google.com/","height=500,width=500");
+    }
+    <!--solicita abrir pagina em nova aba.html -->
 
 </script>
 
