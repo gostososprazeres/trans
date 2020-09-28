@@ -500,34 +500,119 @@ margin-left: 20px;  /* movimenta texto E-D+ */
 
 <!--menu de cotegorias css .html -->
 <style>
-
-.header{
-  background-color: #1D1D1D;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 7px;
-
+*{
+margin: 0;
+padding: 0;
 }
 
 .menu{
-  display:flex;
-  flex-wrap: wrap;
+width: 100%;
+height: 50px;
+background-color: black; /* cor do du fundo da barra menu  */
+font-family:arial black; /* fonte do texto do menu */
 
 }
 
-.menu li{
-margin-left: 20px;
+.menu ul{
+list-style: none;
+position: relative;
+
 }
 
-.menu li a {
-margin: 0px;
+.menu ul li{
+width: 150px; /* lagura dos botoes */
+float: left;
+}
+
+.menu a{
+padding: 15px; /* tamanho dos botoes */
 display: block;
-padding: 5px;
-background-color: #fd64f0;
-font-size: 20px;
+text-decoration: none;
+text-align: center;
+background-color: black; /* cor dos botoes */
+color: #fd64f0; /* cor do texto dos botoes */
+}
+.menu ul ul {
+position: absolute;
+visibility: hidden;
 }
 
+
+.menu ul li:hover > ul {
+visibility:visible;
+
+}
+.menu a:hover {
+background-color: #fd64f0; /* cor dos botoes ao passar o mause */
+color: black;
+transition:1s; /* tempo de transição dos botões não responsivo*/
+}
+
+.menu ul ul li{
+float: none;
+border-bottom: solid 0px black; /* linha abaixo dos sub botoes */
+margin-top: 5px;  /* espaço vertical dos sub botoes */
+
+}
+
+.menu ul ul li a{
+background-color: blue; /* cor de fundo dos sub botoes */
+
+}
+
+label[for="bt_menu"]{
+display: none;
+padding: 1px; /* tamanho do botão reponsivo */
+background-color: black; /* cor do botão reponsivo */
+color: #fd64f0;     /* cor das linhas do botão reponsivo */
+font-family: Arial;
+text-align: center;
+font-size: 40px;  /* tamanho das linhas do botão reponsivo */
+cursor: pointer;
+width: 50px; /* largura do botão reponsivo */
+height: 55px; /* autura do botão reponsivo */
+border-radius: 3px;
+margin-left: 2px;
+margin-top: 2px;
+}
+
+#bt_menu{
+display: none;
+}
+@media (max-width:630px) {
+label[for="bt_menu"]{
+display: block;
+}
+
+#bt_menu:checked ~ .menu {
+margin-left: 0;
+}
+
+.menu{
+margin-top: 5px;     /* espaçamento do botão reponsivo entre o menu */
+margin-left: -100%;
+transition: all 1s; /* tempo de transição do menu  */
+}
+
+.menu ul li {
+width: 100%;
+
+}
+.menu ul ul {
+position: static;
+overflow: hidden;
+max-height: 0;
+max-width: 800px;
+
+
+}
+.menu ul li:hover ul{
+max-height: 450px;    /* autura entre os sub botões */
+max-width:auto;
+margin-bottom: 5px;  /* espaçamento abaixo dos sub botões */
+transition:1s; /* tempo de transição dos sub botões */
+}
+}
 </style>
 <!--menu de cotegorias css .html -->
 
@@ -536,18 +621,24 @@ font-size: 20px;
 <body>
 
 
-<!--menu de cotegorias .html -->
-<header class="header">
-<a href="#"><!--TEXTO LOGO .html --></a>
-<nav>
-<ul class="menu">
+<!--menu de cotegorias.html -->
+<input type="checkbox" id="bt_menu">
+
+<label for="bt_menu"> &#9776;</label>
+
+<nav class="menu">
+<ul>
+<!--botão horizotais -->
 <li><a href="https://gostososprazeres.github.io/novinhas/">Novinha</a></li>
 <li><a href="https://gostososprazeres.github.io/maduras/">Madura</a></li>
-<li><a href="https://gostososprazeres.github.io/trans/">Trans</a></li>
-</ul>
+<li><a href="https://gostososprazeres.github.io/trans/">trans</a></li>
+<li><a href="#">Em breve</a></li>
+<li><a href="#">Em breve</a></li>
+<!--botão horizotais -->
+<ul>
 </nav>
-</header>
-<!--menu de cotegorias .html -->
+<!--menu de cotegorias.html -->
+
 
 <section class="texto-superior">
 
