@@ -42,7 +42,7 @@ max-width: 100%;
 
 
 body {
-background-color: #91468B; /* cor du fundo da pagina */
+background-color: #91468B; /* cor pagina */
 }
 
 
@@ -2044,7 +2044,8 @@ transition:0.4s; /* tempo de transição do btao*/
 /* cor do fundo do rodape  */
 .rodape-da-pagina{
 background-color: #000000;
-height: 40px;
+width: auto;
+height: auto;
 margin: 12px;
 border-radius: 4px;
 margin-top: 100px;
@@ -2053,13 +2054,32 @@ padding: 3px;
 .contadores{   /* contadorescss  */
 margin-left: 20px;
 margin-right: 20px;
-margin-top: -17px;
+margin-top: 0px;
 display: flex;
-justify-content: space-between;
-color: red;
+flex-wrap: wrap;
+justify-content: center;
 }
 .contadores a {
-  font-size: 20px;
+font-size: 20px;
+}
+
+.volte{
+font-family: 'Ultra', serif;
+font-size: 20px;
+text-align: center;
+color: #91468B;
+}
+
+.contador-de-visitas-online{
+width: 250px;
+min-width: 250px;
+height: 70px;
+}
+
+.contador-de-usuarios-online{
+width: 250px;
+min-width: 250px;
+height: 70px;
 }
 
 </style>
@@ -2563,21 +2583,31 @@ and the next visitors and we all thank you !.</p>
 
 <!--contador de usuarios online .html -->
 <div align="center">
+
+<div class="contador-de-usuarios-online">
+
 <script language="JavaScript">var fhs = document.createElement('script');var fhs_id = "5647455";
 var ref = (''+document.referrer+'');var pn =  window.location;var w_h = window.screen.width + " x " + window.screen.height;
 fhs.src = "//freehostedscripts.net/ocounter.php?site="+fhs_id+"&e1=Online User&e2=Online Users&r="+ref+"&wh="+w_h+"&a=1&pn="+pn+"";
 document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
 </script></div>
 
+</div>
 <!--contador de usuarios online .html -->
 
+<h2 class="volte">Volte sempre !!</h2>
 
 <!--contador de visitas online .html -->
+
+<div class="contador-de-visitas-online">
 
 <script language="JavaScript">var fhsg = document.createElement('script');var fhs_id_g = "416124";
 fhsg.src = "//freehostedscripts.net/ghitcounter.php?site="+fhs_id_g+"&s=14&a=1";
 document.head.appendChild(fhsg);document.write("<span id='g_"+fhs_id_g+"'></span>");
+
 </script>
+
+</div>
 
 <!--contador de visitas online .html -->
 
